@@ -1,0 +1,13 @@
+---
+import PocketBase from 'pocketbase';
+
+const client = new PocketBase('https://server.acoustictypewriter911.repl.co');
+
+const resultList = await client.records.getList('posts', 1, 50, {});
+---
+
+
+{resultList.items.map((item) => (
+	<h2>{item.title}</h2>
+	<p>{item.body}</p>
+))}

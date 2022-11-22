@@ -1,0 +1,89 @@
+<nav>
+	<div>
+		<img src = "/logo.png" width="50px">
+		<h1 id = "large">Acoustic Typewriter</h1>
+		<h1 id = "small">AT</h1>
+	</div>
+
+	<div>
+		<a href = "/home">Home</a>
+		<a href = "/about">About</a>
+		<a href = "/posts">Posts</a>
+	</div>
+</nav>
+
+<style>
+	@media screen and (max-width: 500px) {
+		#large {
+			display: none;
+		}
+	}
+	@media screen and (min-width: 501px) {
+		#small {
+			display: none;
+		}
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background: #1c1c1c;
+		padding-left: 1vw;
+		padding-right: 1vw;
+	}
+
+	nav div {
+		display: flex;
+		align-items: center;
+		gap: clamp(5px, 2vw, 20px);
+		margin: clamp(5px, 1vw, 15px);
+	}
+
+	nav h1 {
+		font-family: "Shadows into Light";
+		font-size: 2rem;
+	}
+	a {
+		color: white;
+		font-family: "Chakra Petch";
+		font-size: 110%;
+		position: relative;	
+		text-decoration: none;
+
+		
+	}
+
+	a::before {
+		content: '';
+		position: absolute;
+		top: 98%;
+		left: -7%;
+		width: 4%;
+		height: 8%;
+		background: white;
+		display: block;
+		transition: width linear 0.2s;
+	}
+	a::after {
+		content: '';
+		position: absolute;
+		top: 98%;
+		left: -7%;
+		width: 4%;
+		height: 8%;
+		background: white;
+		display: block;
+		transition: top linear 0.2s, height linear 0.2s;
+	}
+
+	a:hover::before {
+		width: 100%;
+	}
+
+	a:hover::after {
+		top: 0px;
+		height: 100%;
+	}
+
+	
+</style>
