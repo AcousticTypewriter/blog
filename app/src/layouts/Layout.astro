@@ -1,9 +1,6 @@
 ---
-export interface Props {
-	title: string;
-	description: string;
-}
-
+import Wrapper from "@components/Wrapper.astro"
+import Ornaments from "@components/Ornaments.astro"
 const { title, description } = Astro.props;
 ---
 
@@ -21,7 +18,10 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Ornaments/>
+		<Wrapper>
+			<slot />
+		</Wrapper>
 	</body>
 </html>
 <style is:global>
@@ -41,14 +41,16 @@ const { title, description } = Astro.props;
 		);
 		background-repeat: no-repeat;
 		background-size: 100vw 100vh;
-
 		color: white;
 	}
+
+
 
 	* {
 		margin: 0px;
 		padding: 0px;
 	}
+
 	:root {
 		
 	}

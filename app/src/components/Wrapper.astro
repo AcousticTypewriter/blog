@@ -1,0 +1,17 @@
+<div>
+	<slot />
+</div>
+
+
+<style>
+	@media screen and (min-width: 800px) {
+		div {
+			--margin: clamp(0vw, 25vw, 25vw);
+		}
+	}
+	div {
+		
+		margin-left: var(--margin);
+		margin-right: var(--margin);
+	}
+</style>

@@ -14,40 +14,42 @@
 </nav>
 
 <style>
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 650px) {
 		#large {
 			display: none;
 		}
 	}
-	@media screen and (min-width: 601px) {
+	@media screen and (min-width: 650px) {
 		#small {
 			display: none;
 		}
 	}
 	img {
-		width: 7vw;
+
+		width: clamp(50px, 20vh, 75px);
 	}
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		background: #1c1c1c;
-		padding-left: 1vw;
-		padding-right: 1vw;
+		/*background: #1c1c1c;*/
 	}
 
-	nav div, a {
+	nav>div{
 		display: flex;
 		align-items: center;
-		gap: clamp(5px, 2vw, 10px);
-		margin: clamp(5px, 1vw, 15px);
+		gap: clamp(5px, 3vw, 20px);
+		/*margin: clamp(5px, 1vw, 15px);*/
 	}
 
 	nav>a {
+		display: flex;
+		align-items: center;
 		font-family: "Shadows into Light";
-		font-size: 2rem;
+		font-size: clamp(25px, 10vh, 30px);
 		color: white;
 		text-decoration: none;
+		gap:2px;
 		
 	}
 	a:not(nav>a) {
